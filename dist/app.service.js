@@ -9,8 +9,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.AppService = void 0;
 const common_1 = require("@nestjs/common");
 let AppService = class AppService {
+    getHome() {
+        return { title: 'Home Page' };
+    }
+    getAboutUs() {
+        return { title: 'About Us Page' };
+    }
     getHello() {
-        return 'Hello World!';
+        return 'Hello World from ISMS 2020!';
+    }
+    getHello2() {
+        return { title: 'My Greeting App', message: 'Hello World!' };
     }
 };
 AppService = __decorate([

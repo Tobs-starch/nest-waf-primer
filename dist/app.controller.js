@@ -16,16 +16,46 @@ let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
     }
+    getHome() {
+        return this.appService.getHome();
+    }
+    getAboutUs() {
+        return this.appService.getAboutUs();
+    }
     getHello() {
         return this.appService.getHello();
+    }
+    getHello2() {
+        return this.appService.getHello2();
     }
 };
 __decorate([
     (0, common_1.Get)(),
+    (0, common_1.Render)('home.html'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Object)
+], AppController.prototype, "getHome", null);
+__decorate([
+    (0, common_1.Get)('about-us'),
+    (0, common_1.Render)('about-us.html'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Object)
+], AppController.prototype, "getAboutUs", null);
+__decorate([
+    (0, common_1.Get)('hello'),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", String)
 ], AppController.prototype, "getHello", null);
+__decorate([
+    (0, common_1.Get)('hello2'),
+    (0, common_1.Render)('index.html'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Object)
+], AppController.prototype, "getHello2", null);
 AppController = __decorate([
     (0, common_1.Controller)(),
     __metadata("design:paramtypes", [app_service_1.AppService])
